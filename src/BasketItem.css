@@ -1,0 +1,89 @@
+:root {
+	--light-green: #A1DAC9;
+	--mid-green: #88C1B0;
+	--font-col: #b1624eff;
+	--disabled-green: #bcdcd2;
+}
+
+.Basket-Item {
+	background: white;
+	color: var(--font-col);
+	border-bottom: solid var(--mid-green) 2px;
+}
+
+.Basket-Item p {
+	margin: 0;
+}
+
+/*Buttons*/
+.Basket-Item button {
+background: var(--mid-green);
+	color: white;
+	border: none;
+	border-radius: 2px;
+	padding: 0.5em 0.75em;
+	font-size: 1em;
+	transition: 0.25s ease-in-out;
+}
+.Basket-Item button:hover {
+	cursor: pointer;
+	background: var(--light-green);
+}
+.Basket-Item .Btn-Minus {
+	padding: 0.5em 0.93em;
+}
+
+/*basket head (name & remove button)*/
+.Item-Head {
+	padding: 0.25em;
+}
+
+.Item-Head p {
+	display: inline-block;
+	font-size: 1.1em;
+}
+
+.Item-Head button {
+	float: right;
+	margin-bottom: 0.25em;
+}
+
+/*basket details (image, quantity buttons & price)*/
+.Item-Details {
+	position: relative;
+}
+
+.Item-Details img {
+	display: block;
+}
+
+.Item-Details .Item-Btns {
+	text-align: center;
+	position: absolute;
+	top: 20%;
+	left: 0.75em;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Item-Details .Item-Price {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0.25em 0.5em;
+	font-size: 2em;
+}
+
+/*Responsivity*/
+/*Basket moved to top*/
+@media only screen and (max-width: 1300px) {
+	.Basket-Item {
+		max-width: 350px;
+		display: inline-block;
+		border-bottom: none;
+		border-right: solid var(--mid-green) 2px;
+	}
+}
+

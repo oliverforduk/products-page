@@ -1,0 +1,136 @@
+:root {
+	--light-green: #A1DAC9;
+	--mid-green: #88C1B0;
+	--font-col: #b1624eff;
+	--disabled-green: #bcdcd2;
+}
+
+.Product-Item {
+	width: 23%;
+	padding: 1%;
+	display: inline-block;
+}
+
+.Product-Content {
+	background: white;
+	border: solid lightcyan 2px;
+}
+
+img {
+	width: 100%;
+}
+
+/*PRODUCT TYPE, NAME, & PRICE*/
+.Product-Info {
+	padding: 0.5em;
+}
+
+.Product-Item h2 {
+	font-size: 0.9em;
+	color: var(--mid-green);
+	margin: 0.5em 0 0.5em 0;
+}
+
+.Product-Info p {
+	font-size: 1.15em;
+	margin:  0.5em 0 0.5em 0;
+	color: var(--font-col);
+}
+
+.Product-Info .Info-Name {
+	height: 2em;
+}
+
+.Product-Info .Info-Price {
+	font-size: 1.5em;
+	margin: 0.25em 0 0.25em 0;
+}
+
+/* QUANTITY BUTTONS*/
+.Product-Btns {
+	padding: 0.5em;
+}
+
+.Product-Btns span {
+	margin: 0 0.75em;
+	font-size: 1.25em;
+	font-weight: 550;
+	color: var(--font-col);
+}
+
+.Product-Btns button {
+	background: var(--mid-green);
+	color: white;
+	border: none;
+	border-radius: 2px;
+	padding: 0.5em 0.75em;
+	font-size: 1.15em;
+	transition: 0.25s ease-in-out;
+}
+.Product-Btns .Btn-Minus {
+	padding: 0.5em 0.93em;
+}
+.Product-Btns button:hover {
+	cursor: pointer;
+	background: var(--light-green);
+}
+
+/*If button is disabled!*/
+.Product-Btns button:disabled {
+	background: var(--disabled-green);
+}
+.Product-Btns button:disabled:hover {
+	background: var(--disabled-green);
+	cursor: default;
+}
+
+.Product-Btns .Btns-Quantity {
+	display: inline-block;
+}
+
+.Product-Btns .Btns-Basket {
+	display: inline-block;
+	float:  right;
+}
+
+/*BASKET NOTIFICATION*/
+.In-Basket .Product-Content {
+	border-color:  var(--mid-green);
+}
+.In-Basket .Product-Basket h2 {
+	margin: 0.15em 0 0 0;
+	color: var(--mid-green);
+}
+.Product-Basket {
+	text-align: center;
+}
+.Product-Basket h2 {
+	margin: 0.15em 0 0 0;
+	color:  white;
+}
+
+/*Responsivity*/
+/*1500 - 3 products per row, larger Page-Basket*/
+@media only screen and (max-width: 1500px) {
+	.Product-Item {
+		width: 31%;
+	}
+}
+/*1300 - basket moved to top & 4 products*/
+@media only screen and (max-width: 1300px) {
+	.Product-Item {
+		width: 23%;
+	}
+}
+/*1000 - back to 3 products*/
+@media only screen and (max-width: 1000px) {
+	.Product-Item {
+		width: 31%;
+	}
+}
+/*700 - 2 products*/
+@media only screen and (max-width: 700px) {
+	.Product-Item {
+		width: 48%;
+	}
+}

@@ -1,0 +1,140 @@
+:root {
+	--light-green: #A1DAC9;
+	--mid-green: #88C1B0;
+	--font-col: #b1624eff;
+	--disabled-green: #bcdcd2;
+	--light-grey: #F8F8F8;
+}
+
+.Basket {
+	height: 100%;
+}
+
+.Basket-Content {
+	border: solid 4px var(--mid-green);
+	background: var(--light-grey);
+	height: 99.5%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+/*Basket head: title, total, & checkout button*/
+.Basket-Head {
+	background: var(--mid-green);
+	color:  white;
+	text-align: center;
+	border-bottom: solid 2px var(--mid-green);
+}
+
+.Basket-Head h2 {
+	margin:  0;
+	padding: 0.5em;
+}
+
+.Basket-Head .Basket-Title {
+	font-size: 3em;
+	padding-bottom: 0;
+	position: relative;
+}
+
+.Basket-Head .Basket-Title:after {
+	position: absolute;
+	content:  '';
+	width: 80%;
+	left:  10%;
+	height:  3px;
+	bottom: -3px;
+	background:  #FFF;
+}
+
+/*Checkout button*/
+.Basket-Head .Basket-Btn {
+	background: var(--light-grey);
+	padding: 0.75em;
+}
+
+.Basket-Head .Basket-Btn button {
+	background: var(--mid-green);
+	color: white;
+	border: none;
+	border-radius: 2px;
+	padding: 0.5em 3em;
+	font-size: 1.15em;
+	transition: 0.25s ease-in-out;
+}
+.Basket-Head .Basket-Btn button:hover {
+	cursor: pointer;
+	background: var(--light-green);
+}
+
+/*If button is disabled!*/
+.Basket-Head .Basket-Btn button:disabled {
+	background: var(--disabled-green);
+}
+.Basket-Head .Basket-Btn button:disabled:hover {
+	background: var(--disabled-green);
+	cursor: default;
+}
+
+/*container for basket items (scrollable flex item)*/
+.BasketItems-Container {
+	overflow-y: scroll;
+	flex: 1 1 auto;
+	flex-shrink: 0;
+	height: 0px;
+	scrollbar-width: thin;
+}
+
+.BasketItems-Container .Basket-Empty {
+	color: var(--font-col);
+	text-align: center;
+	padding:  0.5em;
+}
+
+/*Responsivity*/
+/*1300 - basket moved to top */
+@media only screen and (max-width: 1300px) {
+	.Basket {
+		padding: 0.75em 0.75em 0 0.75em;
+	}
+
+	/*make basket-head more streamlined*/
+	.Basket-Head h2 {
+		padding: 0;
+		font-size: 2em;
+		display: inline-block;
+	}
+
+	.Basket-Head span {
+		display: none;
+	}
+
+	.Basket-Head .Basket-Title {
+		font-size: 2.5em;
+		padding-right: 0.5em;
+	}
+
+	.Basket-Head .Basket-Title:after {
+		display: none;
+	}
+
+	.Basket-Head .Basket-Btn {
+		padding: 0.5em;
+	}
+
+	/*Display basket-items in horizontal scroll*/
+	.BasketItems-Container {
+		overflow-y: auto;
+		overflow-x: scroll;
+		height: min-content;
+		white-space: nowrap;
+	}
+}
+
+/*remove padding for basket*/
+@media only screen and (max-width: 700px) {
+	.Basket {
+		padding: 0.5em 0 0 0;
+	}
+}

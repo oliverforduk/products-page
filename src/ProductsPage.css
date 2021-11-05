@@ -1,0 +1,56 @@
+.Products-Page {
+	background: lightcyan;
+}
+
+.Page-Container {
+	width: 90vw;
+	min-width: 500px;
+	min-height:  100vh;
+	margin:  0 auto;
+	display:  flex;
+}
+
+.Page-Products {
+	width: 80%;
+}
+
+.Page-Basket {
+	width: 20%;
+	flex: 1;
+	padding: 1.7em 0;
+}
+
+/*Responsivity*/
+/*1500 - 3 products per row, larger Page-Basket*/
+@media only screen and (max-width: 1500px) {
+	.Page-Products {
+		width: 76%;
+
+	}
+	.Page-Basket {
+		width: 24%;
+		padding: 1.4em 0;
+	}
+}
+
+/*1300 - basket moved to top*/
+@media only screen and (max-width: 1300px) {
+	.Page-Container {
+		width: 95vw;
+		flex-direction: column-reverse;
+	}
+
+	.Page-Products {
+		width: 100%;
+
+	}
+	.Page-Basket {
+		width: 100%;
+		padding: 0;
+		/*keeps basket at top of page once scrolled past*/
+		/*position: -webkit-sticky;  
+		position: sticky;
+		top: 0;
+		z-index: 1;*/
+	}
+}

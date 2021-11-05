@@ -1,0 +1,84 @@
+:root {
+	--light-green: #A1DAC9;
+	--mid-green: #88C1B0;
+	--font-col: #b1624eff;
+	--disabled-green: #bcdcd2;
+}
+
+.Page-Head {
+	background-color: white;
+	border-bottom: 1px solid var(--font-col);
+}
+
+/*Header/navbar*/
+.Header {
+	background-color: var(--mid-green);
+	color: white;
+	padding:  0.5em 0;
+}
+
+.Header .Header-Content {
+	width: 88vw;
+	margin:  0 auto;
+	display:  flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5em 0;
+}
+
+.Header-Content .Header-Brand {
+	font-size: 3em;
+	float: left;
+	display: inline-block;
+}
+.Header-Content .Header-Brand:hover {
+	cursor: pointer;
+}
+
+.Header-Options li {
+	display: inline-block;
+	font-size: 1.5em;
+	padding-left: 1.5em;
+}
+
+.Header-Options li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+}
+
+/*product category*/
+.Page-Head .Category {
+	width: 88vw;
+	margin:  0 auto;
+	padding: 1.25em 0;
+}
+
+.Category li {
+	list-style: none;
+	display: inline-block;
+	font-size: 1.25em;
+	margin-right: 2.5em;
+	color:  var(--font-col);
+	transition: 0.4s ease-in-out;
+}
+.Category li:hover {
+	text-decoration: underline;
+	cursor:  pointer;
+}
+
+.Category .Category-Active {
+	font-weight: 550;
+	text-decoration: underline;
+}
+
+/*Responsivity*/
+/*Reduce text size on header*/
+@media only screen and (max-width: 700px) {
+	.Header-Content .Header-Brand {
+		font-size: 2.5em;
+	}
+	.Header-Options li {
+		font-size: 1.25em;
+	}
+}
